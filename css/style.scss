@@ -62,7 +62,7 @@ body {
           transform: rotate(-45deg);
           cursor: pointer;
           outline: none;
-          transition: 1s;
+          transition: background-color 1.2s;
 
           &::after {
             content: "";
@@ -78,7 +78,7 @@ body {
           }
 
           &.active {
-            background-color: #a1a4a7;
+            background-color: #c6e2f9;
 
             &::after {
               transform: translateX(28px);

@@ -76,8 +76,8 @@ body .container .torch-box .torch button {
   transform: rotate(-45deg);
   cursor: pointer;
   outline: none;
-  -webkit-transition: 1s;
-  transition: 1s;
+  -webkit-transition: background-color 1.2s;
+  transition: background-color 1.2s;
 }
 
 body .container .torch-box .torch button::after {
@@ -96,7 +96,7 @@ body .container .torch-box .torch button::after {
 }
 
 body .container .torch-box .torch button.active {
-  background-color: #a1a4a7;
+  background-color: #c6e2f9;
 }
 
 body .container .torch-box .torch button.active::after {
