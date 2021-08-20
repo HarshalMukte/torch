@@ -26,6 +26,10 @@ body {
       background-repeat: no-repeat;
       background-size: contain;
       background-position: right;
+
+      @media screen and (max-width:600px) {
+        background-image: none;
+      }
     }
 
     .torch-box {
@@ -43,6 +47,11 @@ body {
         position: relative;
         z-index: 4;
         position: relative;
+
+        @media screen and (max-width: 930px) {
+          width: 267px;
+          transform: rotate(33deg);
+        }
 
         .handle {
           width: 100%;
@@ -64,6 +73,14 @@ body {
           outline: none;
           transition: background-color 1.2s;
 
+          @media screen and (max-width: 930px) {
+            border: 1px solid #3a444c;
+            width: 32px;
+            height: 16px;
+            top: 120px;
+            left: 142px;
+          }
+
           &::after {
             content: "";
             width: 22px;
@@ -74,7 +91,12 @@ body {
             left: 2px;
             top: 1px;
             transform: translateX(0px);
-            transition: 0.5s;
+            transition:  0.5s;
+
+            @media screen and (max-width: 930px) {
+              width: 12px;
+              height: 12px;
+            }
           }
 
           &.active {
@@ -83,6 +105,11 @@ body {
             &::after {
               transform: translateX(28px);
               background-color: #f5961b;
+
+              @media screen and (max-width: 930px) {
+                transform: translateX(15px);
+              }
+              
             }
           }
         }
@@ -94,8 +121,15 @@ body {
         position: absolute;
         left: 322px;
         z-index: 3;
-        transition: 0.5s;
+        transition: opacity 0.5s;
         opacity: 0;
+
+        @media screen and (max-width: 930px) {
+          left: 191px;
+          transform: rotate(-102deg) translateX(-8%);
+          top: 138px;
+          width: 243px;
+        }
 
         &.active {
           opacity: 1;

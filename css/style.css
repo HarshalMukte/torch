@@ -35,6 +35,12 @@ body .container.active {
   background-position: right;
 }
 
+@media screen and (max-width: 600px) {
+  body .container.active {
+    background-image: none;
+  }
+}
+
 body .container .torch-box {
   width: 100%;
   height: 100%;
@@ -56,6 +62,14 @@ body .container .torch-box .torch {
   position: relative;
   z-index: 4;
   position: relative;
+}
+
+@media screen and (max-width: 930px) {
+  body .container .torch-box .torch {
+    width: 267px;
+    -webkit-transform: rotate(33deg);
+            transform: rotate(33deg);
+  }
 }
 
 body .container .torch-box .torch .handle {
@@ -80,6 +94,16 @@ body .container .torch-box .torch button {
   transition: background-color 1.2s;
 }
 
+@media screen and (max-width: 930px) {
+  body .container .torch-box .torch button {
+    border: 1px solid #3a444c;
+    width: 32px;
+    height: 16px;
+    top: 120px;
+    left: 142px;
+  }
+}
+
 body .container .torch-box .torch button::after {
   content: "";
   width: 22px;
@@ -95,6 +119,13 @@ body .container .torch-box .torch button::after {
   transition: 0.5s;
 }
 
+@media screen and (max-width: 930px) {
+  body .container .torch-box .torch button::after {
+    width: 12px;
+    height: 12px;
+  }
+}
+
 body .container .torch-box .torch button.active {
   background-color: #c6e2f9;
 }
@@ -105,6 +136,13 @@ body .container .torch-box .torch button.active::after {
   background-color: #f5961b;
 }
 
+@media screen and (max-width: 930px) {
+  body .container .torch-box .torch button.active::after {
+    -webkit-transform: translateX(15px);
+            transform: translateX(15px);
+  }
+}
+
 body .container .torch-box .light {
   width: 520px;
   -webkit-transform: rotate(-90deg) translateX(-8%);
@@ -112,9 +150,19 @@ body .container .torch-box .light {
   position: absolute;
   left: 322px;
   z-index: 3;
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
+  -webkit-transition: opacity 0.5s;
+  transition: opacity 0.5s;
   opacity: 0;
+}
+
+@media screen and (max-width: 930px) {
+  body .container .torch-box .light {
+    left: 191px;
+    -webkit-transform: rotate(-102deg) translateX(-8%);
+            transform: rotate(-102deg) translateX(-8%);
+    top: 138px;
+    width: 243px;
+  }
 }
 
 body .container .torch-box .light.active {
